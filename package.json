@@ -1,0 +1,16 @@
+{
+  "author": "thattommyhall <thattommyhall@gmail.com> (http://www.thattommyhall.com)",
+  "name": "tth_",
+  "description": "A few additions to underscore.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/thattommyhall/tth_",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thattommyhall/tth_.git"
+  },
+  "main": "tth_.js",
+  "dependencies": {
+    "underscore": ""
+  },
+  "devDependencies": {}
+}
