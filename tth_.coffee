@@ -1,12 +1,23 @@
 _ = require 'underscore'
 
 _.mixin
-  random: (list) ->
-    if _.isArray(list)
+  random: (input,max) ->
+    if _.isNumber(input)
+      min = input;
+      unless max?
+        max = min;
+        min = 0;
+      return min + (0 | Math.random() * (max - min + 1));
+    else if _.isArray(list)
       return list[Math.floor(Math.random() * list.length)]
-    if _.isObject(list)
-      key = _.random(_.keys(list))
-      return [key,list[key]]
+    else if _.isObject(list)
+      return _.random(_.keys(list))
+    else
+      Math.random()
+
+  now: ->
+    (new Date).getTime()
+
 
 if module?.exports?
   module.exports = _
